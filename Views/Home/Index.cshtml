@@ -1,0 +1,19 @@
+﻿@using DataRepository
+@model List<MainHeading>
+@{
+    ViewBag.Title = "Boxer";
+}
+<div class="quotation_div">
+    <div class="overlay">
+
+        <p>Boxer</p>
+        @foreach (MainHeading item in Model)
+        {
+            <p>@item.Heading</p>
+        }
+        
+
+    </div>
+</div>
+
+

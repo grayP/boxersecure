@@ -1,0 +1,14 @@
+﻿@using DataRepository
+@model Location
+
+@Html.HiddenFor(m => m.Latitude, new { ID = "startLat" });
+@Html.HiddenFor(m => m.Longitude, new { ID = "startLng" });
+
+
+
+
+@Html.Raw(HttpUtility.HtmlDecode(Html.DrawMap("AIzaSyBC-S6ZRqoD9CrpdCKEnQWn9mzFDGZxWzI", "/Location/GetMarkers", "550", "600")));
+
+
+
+

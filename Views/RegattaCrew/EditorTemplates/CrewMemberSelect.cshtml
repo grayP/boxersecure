@@ -1,0 +1,12 @@
+﻿@model DataRepository.CrewMemberSelect
+<tr>
+    <td style="text-align:center">
+        @Html.CheckBoxFor(model => model.selected)
+    </td>
+    <td>
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.Name)
+        @Html.DisplayFor(model => model.Name)
+   </td>
+ 
+</tr>
