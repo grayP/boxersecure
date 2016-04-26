@@ -27,6 +27,18 @@ namespace bw01.Controllers
             return View(rvm);
         }
 
+
+        [AllowAnonymous]
+        public ActionResult Display(int RegattaID, string RegattaName)
+        {
+            RegattaDisplayViewModel rvm = new RegattaDisplayViewModel();
+            rvm.regatta = new DataRepository.Regatta {Id=RegattaID};
+            rvm.HandleRequest();
+            ViewBag.Title = RegattaName;
+
+            return View(rvm);
+        }
+
         [HttpPost]
         [Authorize(Roles = "Admin")]
         public ActionResult Index(RegattaViewModel rvm)

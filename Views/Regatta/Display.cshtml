@@ -1,0 +1,74 @@
+﻿@model DataRepository.Models.RegattaDisplayViewModel
+
+
+
+<div class="table-responsive">
+    <table class="table table-condensed table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Regatta</th>
+                <th>Year</th>
+                <th>Date</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.regatta.RegattaName                   </td>
+                <td>@Model.regatta.RegattaYear</td>
+                <td>@Model.regatta.StartDate.Value.ToString("dd MMM yyyy")</td>
+                <td>@Model.regatta.Result</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="row">
+    @foreach (var item in Model.stories)
+    {
+        <article>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <h4>@item.Heading</h4>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    @Html.Raw(item.DocumentText)
+                </div>
+            </div>
+        </article>
+    }
+
+   </div>
+
+    <div class="row">
+
+        @foreach (var item in Model.photos)
+        {
+
+            string imageBase64 = Convert.ToBase64String(item.ThumbNailSmall);
+            string imageSrc = string.Format("data:image/gif;base64,{0}", imageBase64);
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                <a class="thumbnail" href="@item.ImageURL">
+                    <img class="img-responsive myThumbnail" src="@imageSrc" style="height: auto;" alt="@item.Caption">
+
+
+
+                </a>
+                <div class="desc">
+                    <div class="desc_content">@item.Caption</div>
+
+                </div>
+
+            </div>
+
+
+        }
+    </div>
+
+
+
+
