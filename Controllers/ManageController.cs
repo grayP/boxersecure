@@ -112,22 +112,22 @@ namespace bw01.Controllers
           
 
 
-            string _role = "Admin";
-            if (!Roles.RoleExists(_role))
-                Roles.CreateRole(_role);
+            //string _role = "Admin";
+            //if (!Roles.RoleExists(_role))
+            //    Roles.CreateRole(_role);
 
-            if (!Roles.IsUserInRole("gray.pritchett@optusnet.com.au", _role))
-                Roles.AddUserToRole("gray.pritchett@optusnet.com.au", _role);
-            if (!Roles.IsUserInRole("ctyquin@goa.com.au", _role))
-                Roles.AddUserToRole("ctyquin@goa.com.au", _role);
-            if (!Roles.IsUserInRole("GClarke@bne.mcgees.com.au", _role))
-                Roles.AddUserToRole("GClarke@bne.mcgees.com.au", _role);
-            if (!Roles.IsUserInRole("alex@propsol.com.au", _role))
-                Roles.AddUserToRole("alex@propsol.com.au", _role);
-            if (!Roles.IsUserInRole("pcrooke@bretts.com.au", _role))
-                Roles.AddUserToRole("pcrooke@bretts.com.au", _role);
-            if (!Roles.IsUserInRole("fraser@rsaarchitects.net", _role))
-                Roles.AddUserToRole("fraser@rsaarchitects.net", _role);
+            //if (!Roles.IsUserInRole("gray.pritchett@optusnet.com.au", _role))
+            //    Roles.AddUserToRole("gray.pritchett@optusnet.com.au", _role);
+            //if (!Roles.IsUserInRole("ctyquin@goa.com.au", _role))
+            //    Roles.AddUserToRole("ctyquin@goa.com.au", _role);
+            //if (!Roles.IsUserInRole("GClarke@bne.mcgees.com.au", _role))
+            //    Roles.AddUserToRole("GClarke@bne.mcgees.com.au", _role);
+            //if (!Roles.IsUserInRole("alex@propsol.com.au", _role))
+            //    Roles.AddUserToRole("alex@propsol.com.au", _role);
+            //if (!Roles.IsUserInRole("pcrooke@bretts.com.au", _role))
+            //    Roles.AddUserToRole("pcrooke@bretts.com.au", _role);
+            //if (!Roles.IsUserInRole("fraser@rsaarchitects.net", _role))
+            //    Roles.AddUserToRole("fraser@rsaarchitects.net", _role);
         }
 
         //
