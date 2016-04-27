@@ -101,7 +101,12 @@
                         @Html.DropDownListFor(m => m.imageToUpload.RegattaID, new SelectList(Model.RegattaList, "RegattaID", "Regatta", Convert.ToInt32(Model.EventArgument)), new { @class = "form-control" })
 
                     </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.imageToUpload.DateTaken, "Date")
+                        @Html.Kendo().DatePickerFor(m => m.imageToUpload.DateTaken).Format("d/MM/yyyy").HtmlAttributes(new { @class = "form-control" })
+                    </div>
 
+                   
 
 
                 </div>
